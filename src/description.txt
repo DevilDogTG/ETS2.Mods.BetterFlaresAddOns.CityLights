@@ -29,7 +29,7 @@ What does NOT change:
 7. Better Flares - Base v4.9.1
 
 Only for Euro Truck Simulator 2 1.62 with Better Flares v4.9 / v4.9.1. Better Flares Base and City
-Lights Addon are both required.
+Lights Addon are both required. Use the plain City Lights Addon, not "City Lights Addon with Fog".
 --------------------
 [orange]Changelog
 [normal]1.0.0 - First release (in development).

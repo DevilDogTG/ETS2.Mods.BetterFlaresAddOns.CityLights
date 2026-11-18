@@ -1,0 +1,683 @@
+SiiNunit
+{
+light_source : template.light.lamp.b.normal.fadelong.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (3200, 210, 20)
+	specular_color: (3200, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+}
+
+light_source : template.light.lamp.n.normal.fadelong.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (3200, 50, 15)
+	specular_color: (3200, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+}
+
+light_source : template.light.lamp.y.normal.fadelong.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1600, 36, 82)
+	specular_color: (1600, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+}
+
+light_source : template.light.lamp.b.normal.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (6500, 210, 20)
+	specular_color: (6500, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : template.light.lamp.n.normal.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (6500, 50, 15)
+	specular_color: (6500, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : template.light.lamp.y.normal.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (6500, 36, 82)
+	specular_color: (6500, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : template.light.lamp.b.strong.fadelong.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (4200, 210, 20)
+	specular_color: (4200, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+}
+
+light_source : template.light.lamp.n.strong.fadelong.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (4200, 50, 15)
+	specular_color: (4200, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+}
+
+light_source : template.light.lamp.y.strong.fadelong.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (4200, 36, 82)
+	specular_color: (4200, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+}
+
+light_source : template.light.lamp.b.strong.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (8300, 210, 20)
+	specular_color: (8300, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : template.light.lamp.n.strong.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (8300, 50, 15)
+	specular_color: (8300, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : template.light.lamp.y.strong.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (8300, 36, 82)
+	specular_color: (8300, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : template.light.lamp.b.weak.fadelong.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (1900, 210, 20)
+	specular_color: (1900, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+}
+
+light_source : template.light.lamp.n.weak.fadelong.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (1900, 50, 15)
+	specular_color: (1900, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+}
+
+light_source : template.light.lamp.y.weak.fadelong.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1900, 36, 82)
+	specular_color: (1900, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+}
+
+light_source : template.light.lamp.b.weak.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (3700, 210, 20)
+	specular_color: (3700, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : template.light.lamp.n.weak.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (3700, 50, 15)
+	specular_color: (3700, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : template.light.lamp.y.weak.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (3700, 36, 82)
+	specular_color: (3700, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : template.light.lamp.b.normal.fadeshort.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (3200, 210, 20)
+	specular_color: (3200, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+
+	fade_distance: 40
+		fade_span: 60
+}
+
+light_source : template.light.lamp.n.normal.fadeshort.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (3200, 50, 15)
+	specular_color: (3200, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.y.normal.fadeshort.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (3200, 36, 82)
+	specular_color: (3200, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.b.normal.fadeshort.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (6500, 210, 20)
+	specular_color: (6500, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.n.normal.fadeshort.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (6500, 50, 15)
+	specular_color: (6500, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.y.normal.fadeshort.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (6500, 36, 82)
+	specular_color: (6500, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.b.strong.fadeshort.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (4200, 210, 20)
+	specular_color: (4200, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.n.strong.fadeshort.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (4200, 50, 15)
+	specular_color: (4200, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.y.strong.fadeshort.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (4200, 36, 82)
+	specular_color: (4200, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.b.strong.fadeshort.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (8300, 210, 20)
+	specular_color: (8300, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.n.strong.fadeshort.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (8300, 50, 15)
+	specular_color: (8300, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.y.strong.fadeshort.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (8300, 36, 82)
+	specular_color: (8300, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.b.weak.fadeshort.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (1900, 210, 20)
+	specular_color: (1900, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.n.weak.fadeshort.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (1900, 50, 15)
+	specular_color: (1900, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.y.weak.fadeshort.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1900, 36, 82)
+	specular_color: (1900, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 1.0
+	outer_angle: 100.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.b.weak.fadeshort.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (3700, 210, 20)
+	specular_color: (3700, 210, 20)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.n.weak.fadeshort.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (3700, 50, 15)
+	specular_color: (3700, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.y.weak.fadeshort.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (3700, 36, 82)
+	specular_color: (3700, 36, 82)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : template.light.lamp.n.normal.fadelong.deg130.always
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (6500, 50, 15)
+	specular_color: (6500, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+	always_on: true
+}
+
+light_source : template.light.lamp.n.weak.fadelong.deg130.always
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (3700, 50, 15)
+	specular_color: (3700, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+	always_on: true
+}
+
+light_source : template.light.lamp.n.normal.fadeshort.deg130.always
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (6500, 50, 15)
+	specular_color: (6500, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : template.light.lamp.n.weak.fadeshort.deg130.always
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (3700, 50, 15)
+	specular_color: (3700, 50, 15)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : template.light.lamp.garage.strong.fadelong.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (1, 199, 1)
+	diffuse_color: (8300, 189, 1)
+	specular_color: (8300, 189, 1)
+	
+	cut_direction: vertical
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+	
+	
+}
+}

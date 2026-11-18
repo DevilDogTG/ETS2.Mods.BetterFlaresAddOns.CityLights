@@ -1,0 +1,74 @@
+SiiNunit
+{
+light_source : light.spot.y.fadelong.5m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (150, 36, 82)
+	specular_color: (150, 36, 82)
+
+	range: 10
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+
+//	dir_type: all
+//	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+//	scale_factor: 3.0
+}
+
+light_source : light.spot.y.fadelong.10m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (600, 36, 82)
+	specular_color: (600, 36, 82)
+
+	range: 10
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.y.fadelong.15m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1600, 36, 82)
+	specular_color: (1600, 36, 82)
+
+	range: 15
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.y.fadelong.30m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (6400, 36, 82)
+	specular_color: (6400, 36, 82)
+
+	range: 30
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.y.fadelong.50m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (12800, 36, 82)
+	specular_color: (12800, 36, 82)
+
+	range: 50
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+}

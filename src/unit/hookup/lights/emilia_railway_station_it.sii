@@ -1,0 +1,12 @@
+SiiNunit
+{
+light_source : emilia.railway.station
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 80)
+	diffuse_color: (25, 45, 55)
+
+	type: point
+	range: 20
+}
+}

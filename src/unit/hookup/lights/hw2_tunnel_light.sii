@@ -1,0 +1,14 @@
+SiiNunit
+{
+light_source : hw2.tun.light
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (63700, 36, 82)
+	specular_color: (63700, 36, 82)
+
+	type: point
+	range: 12
+  
+  always_on: true
+}
+}

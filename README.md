@@ -5,7 +5,7 @@ Flares look (flare sprites, colour shift, beam shape) but light the world about 
 lights City Lights drops on game 1.62 come back, and environment lights Better Flares never touches get the same
 style.
 
-**Status: in development (`1.0.0-dev`).** ETS2 1.62 only, Better Flares Base 4.9.1 + City Lights 4.9. An ATS twin
+**Status: in development (`1.0.0-dev.1`, first test build: brightness + 1.62 restore).** ETS2 1.62 only, Better Flares Base 4.9.1 + City Lights 4.9. An ATS twin
 repo comes later.
 
 ## Load order
@@ -33,13 +33,28 @@ Top = highest priority in Mod Manager:
 Not here: headlights (MoreVisibility), traffic lights (DriveDogs World), vehicle interior / plate lights.
 
 ## How it works
-The `src/unit/` files are **generated, not hand-edited**, from the extracted base game and Better Flares, so a
-game or Better Flares update is a regenerate, not a re-edit. The generator lands in phase 2 of the 1.0.0 work;
-its design will be in `docs/adr/`.
+The `src/unit/` files are **generated, not hand-edited**, from the extracted base game 1.62 and Better Flares 4.9.1,
+so a game or Better Flares update is a regenerate, not a re-edit. Design: [ADR-0001](docs/adr/ADR-0001-generated-city-lights-files.md).
+
+`tools/generate_citylights.py` takes each City Lights file at a base-game path and
+- keeps every Better Flares unit's own block, raising only `diffuse_color` / `specular_color` intensity to
+  `max(Better Flares, intensity x base game)` (`ambient_color` has its own lever, off by default);
+- appends the base units City Lights' copy lacks, styled from their Better Flares sibling;
+- writes only files that differ from Better Flares', and fails on any `model:` that doesn't resolve.
+
+| Lever (`LEVERS`) | Effect |
+|---|---|
+| `intensity` | diffuse / specular target as a fraction of the base game (`1.0` = base-game brightness, `None` = BF's) |
+| `ambient` | ambient target, same rule (`None` = BF's) |
+| `restore` | re-add the units City Lights drops on 1.62 |
+
+Test rounds and their values: [`docs/tuning.md`](docs/tuning.md).
 
 ## Build
 ```
-python tools/generate_cover.py     # src/cover.jpg from logo.png + manifest version (also run by prePack)
+python tools/generate_citylights.py                    # regenerate src/unit/hookup (--notes lists kept / restored units)
+python tools/generate_citylights.py --neutral --out <dir>   # identity check: must equal City Lights byte-for-byte
+python tools/generate_cover.py                         # src/cover.jpg from logo.png + manifest version (also run by prePack)
 ```
 Packed with the `pack-mod` workflow (`pack.config.json`: `drivedog_bf_citylights`, game `ets2`). Output goes to
 `output/` (ignored).

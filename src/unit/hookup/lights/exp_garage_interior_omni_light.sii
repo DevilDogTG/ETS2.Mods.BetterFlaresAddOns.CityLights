@@ -1,0 +1,12 @@
+SiiNunit
+{
+light_source : exp.garage.interior.omni.light
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (20, 210, 20)
+
+	type: point
+	range: 25
+}
+}

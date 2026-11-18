@@ -1,0 +1,12 @@
+SiiNunit
+{
+light_source : flame.omni.light
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (5000, 25, 90)
+	specular_color: (5000, 25, 90)
+
+	type: point
+	range: 10
+}
+}

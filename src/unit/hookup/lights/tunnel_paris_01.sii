@@ -1,0 +1,12 @@
+SiiNunit
+{
+light_source : tunnel.paris.01.light
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (30200, 36, 82)
+	specular_color: (30200, 36, 82)
+
+	type: point
+	range: 10
+}
+}

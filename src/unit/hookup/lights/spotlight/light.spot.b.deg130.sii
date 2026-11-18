@@ -1,0 +1,88 @@
+SiiNunit
+{
+light_source : light.spot.b.fadelong.5m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (150, 210, 20)
+	specular_color: (150, 210, 20)
+
+	range: 10
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+
+//	dir_type: all
+//	model: "/model/flare/lamp_9k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+//	scale_factor: 1.6.0
+}
+
+light_source : light.spot.b.fadelong.10m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (600, 210, 20)
+	specular_color: (600, 210, 20)
+
+	range: 10
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.b.fadelong.15m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (1600, 210, 20)
+	specular_color: (1600, 210, 20)
+
+	range: 15
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.b.fadelong.30m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (6400, 210, 20)
+	specular_color: (6400, 210, 20)
+
+	range: 30
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.b.fadelong.50m.deg130
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (12800, 210, 20)
+	specular_color: (12800, 210, 20)
+
+	range: 50
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.b.fadelong.30m.deg130.always
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (6400, 210, 20)
+	specular_color: (6400, 210, 20)
+
+	range: 30
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+	always_on: true
+}
+}

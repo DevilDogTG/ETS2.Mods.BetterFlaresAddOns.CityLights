@@ -1,0 +1,12 @@
+SiiNunit
+{
+light_source : mall.omni.light
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 45, 55)
+	diffuse_color: (25, 45, 55)
+
+	type: point
+	range: 23
+}
+}

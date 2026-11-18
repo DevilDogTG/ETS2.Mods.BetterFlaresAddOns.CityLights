@@ -1,0 +1,633 @@
+SiiNunit
+{
+light_source : light.y.3m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (500, 36, 82)
+	specular_color: (500, 36, 82)
+
+	range: 12
+	cut_range: 4
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.5m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (900, 36, 82)
+	specular_color: (900, 36, 82)
+
+	range: 18
+	cut_range: 6
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.7m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1200, 36, 82)
+	specular_color: (1200, 36, 82)
+
+	range: 24
+	cut_range: 8
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.8m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (2300, 36, 82)
+	specular_color: (2300, 36, 82)
+
+	range: 27
+	cut_range: 9
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.9m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (4400, 36, 82)
+	specular_color: (4400, 36, 82)
+
+	range: 30
+	cut_range: 10
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.9m.half
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (2200, 36, 82)
+	specular_color: (2200, 36, 82)
+
+	range: 30
+	cut_range: 10
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.9m.angled15
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (4100, 36, 82)
+	specular_color: (4100, 36, 82)
+
+	range: 30
+	cut_range: 10
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.9.5m.angled15
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (3000, 36, 82)
+	specular_color: (3000, 36, 82)
+
+	range: 39
+	cut_range: 13
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.9m.24
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1900, 36, 82)
+	specular_color: (1900, 36, 82)
+
+	range: 30
+	cut_range: 10
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+	always_on: true	
+}
+
+light_source : light.y.10m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (5700, 36, 82)
+	specular_color: (5700, 36, 82)
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.10m.angled12
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (5300, 36, 82)
+	specular_color: (5300, 36, 82)
+
+	range: 33
+	cut_range: 11
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.10.5m.angled20
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (7000, 36, 82)
+	specular_color: (7000, 36, 82)
+
+	range: 35
+	cut_range: 11.5
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.11m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (6900, 36, 82)
+	specular_color: (6900, 36, 82)
+
+	range: 36
+	cut_range: 12
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.11m.angled20
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (7400, 36, 82)
+	specular_color: (7400, 36, 82)
+
+	range: 54
+	cut_range: 18
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : ibe.tunnel.always.on.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (3500, 36, 82)
+	specular_color: (3500, 36, 82)
+
+	range: 17.0
+	cut_range: 20
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	#attenuation_start_range: 1
+	always_on: true
+}
+
+light_source : ibe.tunnel2.always.on.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (900, 36, 82)
+	specular_color: (900, 36, 82)
+
+	range: 15.5
+	cut_range: 19
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	#attenuation_start_range: 1
+	always_on: true
+	
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : ibe.tunnel3.always.on.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1800, 36, 82)
+	specular_color: (1800, 36, 82)
+
+	range: 9.5
+	cut_range: 10.5
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	#attenuation_start_range: 1
+	always_on: true
+	
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : ibe.tunnel3hw3ow.always.on.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1800, 36, 82)
+	specular_color: (1800, 36, 82)
+	range: 13
+	cut_range: 14.5
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	#attenuation_start_range: 1
+	always_on: true
+	
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : ibe.tunnel3hw1ow.always.on.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1800, 36, 82)
+	specular_color: (1800, 36, 82)
+
+	range: 9.5
+	cut_range: 10.5
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	#attenuation_start_range: 1
+	always_on: true
+	
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : ibe.tunnelVigo.always.on.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (1700, 36, 82)
+	specular_color: (1700, 36, 82)
+
+	range: 36
+	cut_range: 12
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	#attenuation_start_range: 1
+	always_on: true
+}
+
+light_source : ibe.tunnRound1.always.on.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (2400, 36, 82)
+	specular_color: (2400, 36, 82)
+
+	range: 13
+	cut_range: 15
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	#attenuation_start_range: 1
+	always_on: true
+	
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : ibe.tunnRound2.always.on.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (2400, 36, 82)
+	specular_color: (2400, 36, 82)
+
+	range: 12.5
+	cut_range: 16
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	#attenuation_start_range: 1
+	always_on: true
+	
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : ibe.tunnRound3.always.on.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (2400, 36, 82)
+	specular_color: (2400, 36, 82)
+
+	range: 13.0
+	cut_range: 16
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	#attenuation_start_range: 1
+	always_on: true
+	
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.13m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (9500, 36, 82)
+	specular_color: (9500, 36, 82)
+
+	range: 42
+	cut_range: 14
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.13m.angled15
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (7400, 36, 82)
+	specular_color: (7400, 36, 82)
+
+	range: 45
+	cut_range: 15
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical	
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.13m.half
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (5400, 36, 82)
+	specular_color: (5400, 36, 82)
+
+	range: 45
+	cut_range: 15
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	cut_direction: vertical	
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.15m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (12000, 36, 82)
+	specular_color: (12000, 36, 82)
+
+	range: 48
+	cut_range: 16
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.17m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (16000, 36, 82)
+	specular_color: (16000, 36, 82)
+
+	range: 54
+	cut_range: 18
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.20m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (21400, 36, 82)
+	specular_color: (21400, 36, 82)
+
+	range: 63
+	cut_range: 21
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : light.y.25m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (33300, 36, 82)
+	specular_color: (33300, 36, 82)
+
+	range: 78
+	cut_range: 26
+	inner_angle: 5.0
+	outer_angle: 130.0
+  
+	dir_type: all
+	model: "/model/flare/lamp_2k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+}
