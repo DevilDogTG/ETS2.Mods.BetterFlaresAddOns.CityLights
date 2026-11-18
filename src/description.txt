@@ -1,0 +1,35 @@
+[orange]DriveDogs: Better Flares City Lights
+
+[normal]An add-on for Better Flares v4.9 - City Lights Addon. Street, tunnel and other environment lights
+keep the Better Flares look (flare sprites, colour and beam shape) but light the world about as brightly as
+the base game, and the lights Better Flares leaves untouched get the same look, so night driving has one
+consistent style.
+--------------------
+[orange]What changes
+[normal]- Brighter environment lights: Better Flares City Lights makes nights much darker (about 30% of
+  the base game's light). This mod gives every lamp back its own base-game brightness while keeping
+  Better Flares' sprite, colour and beam shape.
+- Lights that are missing with City Lights on game 1.62 come back: its files predate 1.62 and drop the
+  newer fill lights used in underground depots, player garages and some bus stations.
+- (planned for 1.0.0) Tunnel lights and environment lights Better Flares never touches (beacons, plane
+  flares, Genoa bridge, Akureyri pier, dealer halls, coloured lamps) in the Better Flares style.
+
+What does NOT change:
+- Headlights and vehicle lights (see DriveDogs: Better Flares More Visibility).
+- Traffic lights.
+--------------------
+[orange]Requirements / load order
+[normal]Top = highest priority in Mod Manager:
+1. DriveDogs: Better Flares City Lights   <- this mod
+2. DriveDogs: Better Flares More Visibility (optional)
+3. Better Flares - Traffic Addon (optional)
+4. Better Flares - Headlights.2 (optional)
+5. Better Flares - Headlights.1 (optional)
+6. Better Flares - City Lights Addon v4.9
+7. Better Flares - Base v4.9.1
+
+Only for Euro Truck Simulator 2 1.62 with Better Flares v4.9 / v4.9.1. Better Flares Base and City
+Lights Addon are both required.
+--------------------
+[orange]Changelog
+[normal]1.0.0 - First release (in development).
