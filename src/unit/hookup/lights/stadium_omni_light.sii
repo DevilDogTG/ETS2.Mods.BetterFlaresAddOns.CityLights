@@ -1,0 +1,12 @@
+SiiNunit
+{
+light_source : stadium.omni.light
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 80)
+	diffuse_color: (30, 45, 55)
+
+	type: point
+	range: 45
+}
+}

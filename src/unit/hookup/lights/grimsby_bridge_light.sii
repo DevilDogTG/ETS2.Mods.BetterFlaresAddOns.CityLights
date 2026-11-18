@@ -1,0 +1,12 @@
+SiiNunit
+{
+light_source : grimsby.bridge.light
+{
+	setup: lux_hue_saturation
+	diffuse_color: (20, 45, 55)
+	specular_color: (20, 45, 55)
+
+	type: point
+	range: 21
+}
+}

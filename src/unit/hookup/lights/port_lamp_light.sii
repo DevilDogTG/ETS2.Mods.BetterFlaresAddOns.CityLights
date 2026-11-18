@@ -1,0 +1,15 @@
+SiiNunit
+{
+light_source : port.lamp.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 80)
+	diffuse_color: (25400, 45, 55)
+	specular_color: (25400, 45, 55)
+
+	range: 84
+	cut_range: 28
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+}

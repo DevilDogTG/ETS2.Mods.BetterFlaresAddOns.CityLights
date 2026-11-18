@@ -1,0 +1,126 @@
+SiiNunit
+{
+
+light_source : omni.n.5m #N2
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (2400, 50, 15)
+	specular_color: (2400, 50, 15)
+
+	type: point
+	range: 6
+}
+
+light_source : omni.n.10m
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (17700, 50, 15)
+	specular_color: (17700, 50, 15)
+
+	type: point
+	range: 11
+}
+
+light_source : omni.n.15m
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (20, 50, 15)
+
+	type: point
+	range: 16
+}
+
+light_source : omni.n.20m
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (27, 50, 15)
+
+	type: point
+	range: 21
+}
+
+light_source : omni.n.25m #istambul test
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (2, 50, 15)
+
+	type: point
+	range: 45
+}
+
+light_source : omni.n.50m
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (20, 50, 15)
+
+	type: point
+	range: 51
+}
+
+light_source : omni.n.10m.50 #strong
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (8000, 50, 15)
+	specular_color: (8000, 50, 15)
+
+	type: point
+	range: 11
+}
+
+light_source : omni.n.15m.50 #strong
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (6, 50, 15)
+
+	type: point
+	range: 16
+}
+
+light_source : omni.n.20m.50 #strong
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (6, 50, 15)
+
+	type: point
+	range: 21
+}
+
+light_source : omni.n.20m.50.always #strong
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (6, 50, 15)
+
+	always_on: true
+
+	type: point
+	range: 21
+}
+
+light_source : omni.n.25m.50 #strong
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (6, 50, 15)
+
+	type: point
+	range: 26
+}
+
+light_source : omni.n.50m.50 #strong
+{
+	setup: lux_hue_saturation
+	diffuse_color: (10, 36, 82)
+	specular_color: (6, 50, 15)
+
+	type: point
+	range: 51
+}
+
+}

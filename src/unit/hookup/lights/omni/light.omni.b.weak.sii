@@ -1,0 +1,92 @@
+SiiNunit
+{
+
+light_source : light.omni.b.weak.fadelong.3m
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (1500, 210, 20)
+	specular_color: (1500, 210, 20)
+
+	type: point
+	range: 4
+}
+
+light_source : light.omni.b.weak.fadelong.5m
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (6500, 210, 20)
+	specular_color: (6500, 210, 20)
+
+	type: point
+	range: 6
+}
+
+light_source : light.omni.b.weak.fadelong.7m
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (20000, 210, 20)
+	specular_color: (20000, 210, 20)
+
+	type: point
+	range: 8
+}
+
+light_source : light.omni.b.weak.fadelong.9m
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (45000, 210, 20)
+	specular_color: (45000, 210, 20)
+
+	type: point
+	range: 10
+}
+
+light_source : light.omni.b.weak.fadeshort.3m
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (1500, 210, 20)
+	specular_color: (1500, 210, 20)
+
+	type: point
+	range: 4
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.omni.b.weak.fadeshort.5m
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (6500, 210, 20)
+	specular_color: (6500, 210, 20)
+
+	type: point
+	range: 6
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.omni.b.weak.fadeshort.7m
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (20000, 210, 20)
+	specular_color: (20000, 210, 20)
+
+	type: point
+	range: 8
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.omni.b.weak.fadeshort.9m
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (45000, 210, 20)
+	specular_color: (45000, 210, 20)
+
+	type: point
+	range: 10
+	fade_distance: 40
+    	fade_span: 60
+}
+
+}

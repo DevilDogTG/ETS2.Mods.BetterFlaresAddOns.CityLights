@@ -1,0 +1,22 @@
+SiiNunit
+{
+light_source : tollgate.lamp.light
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 80)
+	diffuse_color: (15300, 45, 55)
+	specular_color: (15300, 45, 55)
+
+	range: 123
+	cut_range: 41
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_4k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+}

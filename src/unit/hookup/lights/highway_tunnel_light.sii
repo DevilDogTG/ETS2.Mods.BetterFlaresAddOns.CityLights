@@ -1,0 +1,14 @@
+SiiNunit
+{
+light_source : highway.tunnel.light
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (63700, 45, 55)
+	specular_color: (63700, 45, 55)
+
+	type: point
+	range: 14
+  
+  always_on: true
+}
+}

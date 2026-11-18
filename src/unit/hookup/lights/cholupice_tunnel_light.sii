@@ -1,0 +1,14 @@
+SiiNunit
+{
+light_source : cholupice.tunnel.light
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (37700, 45, 55)
+	specular_color: (37700, 45, 55)
+
+	type: point
+	range: 13
+  
+  always_on: true
+}
+}

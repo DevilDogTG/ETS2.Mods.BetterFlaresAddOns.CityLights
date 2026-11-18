@@ -1,0 +1,28 @@
+SiiNunit
+{
+light_source : heigh21m.no.flare
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 80)
+	diffuse_color: (4400, 45, 55)
+	specular_color: (4400, 45, 55)
+
+	range: 66.0
+	cut_range: 22.0
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : heigh21m.no.flare.half
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 80)
+	diffuse_color: (10000, 45, 55)
+	specular_color: (10000, 45, 55)
+
+	range: 66.0
+	cut_range: 22.0
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+}

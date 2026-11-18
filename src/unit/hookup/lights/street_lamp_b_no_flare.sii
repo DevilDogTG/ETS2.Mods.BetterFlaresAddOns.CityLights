@@ -1,0 +1,145 @@
+SiiNunit
+{
+light_source : street.lamp.b.3m.no.flare #B1
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (600, 210, 20)
+	specular_color: (600, 210, 20)
+
+	range: 12
+	cut_range: 4
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.4m.no.flare #B1
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (800, 210, 20)
+	specular_color: (800, 210, 20)
+
+	range: 15
+	cut_range: 5
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.5m.no.flare
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (1000, 210, 20)
+	specular_color: (1000, 210, 20)
+
+	range: 18
+	cut_range: 8
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.6m.no.flare #B1
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (1200, 210, 20)
+	specular_color: (1200, 210, 20)
+
+	range: 21
+	cut_range: 7
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.7m.no.flare
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (1500, 210, 20)
+	specular_color: (1500, 210, 20)
+
+	range: 24
+	cut_range: 10
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.9m.no.flare
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (2300, 210, 20)
+	specular_color: (2300, 210, 20)
+
+	range: 30
+	cut_range: 12
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.11m.no.flare #small US street lamp
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (2600, 210, 20)
+	specular_color: (2600, 210, 20)
+
+	range: 36
+	cut_range: 14
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.13m.no.flare
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (3000, 210, 20)
+	specular_color: (3000, 210, 20)
+
+	range: 42
+	cut_range: 16
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.15m.no.flare #big double US street lamp
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (3400, 210, 20)
+	specular_color: (3400, 210, 20)
+
+	range: 48
+	cut_range: 18
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.17m.no.flare
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (3800, 210, 20)
+	specular_color: (3800, 210, 20)
+
+	range: 54
+	cut_range: 20
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : street.lamp.b.20m.no.flare
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 220, 40)
+	diffuse_color: (4400, 210, 20)
+	specular_color: (4400, 210, 20)
+
+	range: 63
+	cut_range: 23
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+}

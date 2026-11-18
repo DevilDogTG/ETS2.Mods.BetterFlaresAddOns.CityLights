@@ -1,0 +1,18 @@
+SiiNunit
+{
+light_source : bus_noflare
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 80)
+	diffuse_color: (7500, 45, 55)
+	specular_color: (7500, 45, 55)
+
+	range: 48.0
+	cut_range: 16
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	forward_distance: false
+}
+}

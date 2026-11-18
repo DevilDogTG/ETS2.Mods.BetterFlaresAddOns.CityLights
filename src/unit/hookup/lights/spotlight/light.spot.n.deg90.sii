@@ -1,0 +1,67 @@
+SiiNunit
+{
+light_source : light.spot.n.fadelong.5m.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (60, 50, 15)
+	specular_color: (60, 50, 15)
+
+	range: 10
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.n.fadelong.10m.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (300, 50, 15)
+	specular_color: (300, 50, 15)
+
+	range: 10
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.n.fadelong.15m.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (800, 50, 15)
+	specular_color: (800, 50, 15)
+
+	range: 15
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.n.fadelong.30m.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (3200, 50, 15)
+	specular_color: (3200, 50, 15)
+
+	range: 30
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : light.spot.n.fadelong.50m.deg90
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (8000, 50, 15)
+	specular_color: (8000, 50, 15)
+
+	range: 50
+
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+}

@@ -1,0 +1,163 @@
+SiiNunit
+{
+
+light_source : junction.lamp.n.5m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (1700, 50, 15)
+	specular_color: (1700, 50, 15)
+
+	range: 18
+	cut_range: 6
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_6k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : junction.lamp.n.7m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (2900, 50, 15)
+	specular_color: (2900, 50, 15)
+
+	range: 24
+	cut_range: 8
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_6k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : junction.lamp.n.9m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (3900, 50, 15)
+	specular_color: (3900, 50, 15)
+
+	range: 30
+	cut_range: 10
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_6k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : junction.lamp.n.11m #small US street lamp
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (2600, 50, 15)
+	specular_color: (2600, 50, 15)
+
+	range: 36
+	cut_range: 12
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_6k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : junction.lamp.n.13m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (5600, 50, 15)
+	specular_color: (5600, 50, 15)
+
+	range: 42
+	cut_range: 14
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_6k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : junction.lamp.n.15m #big double US street lamp
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (3400, 50, 15)
+	specular_color: (3400, 50, 15)
+
+	range: 48
+	cut_range: 16
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_6k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : junction.lamp.n.17m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (6900, 50, 15)
+	specular_color: (6900, 50, 15)
+
+	range: 54
+	cut_range: 18
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_6k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+
+light_source : junction.lamp.n.20m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (7600, 50, 15)
+	specular_color: (7600, 50, 15)
+
+	range: 63
+	cut_range: 21
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	dir_type: all
+	model: "/model/flare/lamp_6k.pmd"
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+	scale_factor: 1.6
+ 	default_scale: 9
+}
+}

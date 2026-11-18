@@ -1,0 +1,448 @@
+SiiNunit
+{
+
+light_source : light.fill.gg.weak.fadelong.20m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (5, 148, 72)
+
+	type: point
+	range: 20
+}
+
+light_source : light.fill.gg.weak.fadelong.10m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (6, 148, 72)
+
+	type: point
+	range: 10
+}
+
+light_source : light.fill.gg.weak.fadelong.5m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (7, 148, 72)
+
+	type: point
+	range: 5
+}
+
+light_source : light.fill.rr.weak.fadelong.20m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (5, 0, 56)
+
+	type: point
+	range: 20
+}
+
+light_source : light.fill.rr.weak.fadelong.10m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (6, 0, 56)
+
+	type: point
+	range: 10
+}
+
+light_source : light.fill.rr.weak.fadelong.5m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (7, 0, 56)
+
+	type: point
+	range: 5
+}
+
+light_source : light.fill.bb.weak.fadelong.15m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 240, 68)
+        diffuse_color: (5, 240, 68)
+
+	type: point
+	range: 15
+}
+
+light_source : light.fill.bb.weak.fadelong.20m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (5, 264, 68)
+
+	type: point
+	range: 20
+}
+
+light_source : light.fill.bb.weak.fadelong.10m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (6, 264, 68)
+
+	type: point
+	range: 10
+}
+
+light_source : light.fill.bb.weak.fadelong.5m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (7, 264, 68)
+
+	type: point
+	range: 5
+}
+
+light_source : light.fill.gg.weak.fadeshort.20m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (5, 148, 72)
+
+	type: point
+	range: 20
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.fill.gg.weak.fadeshort.10m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (6, 148, 72)
+
+	type: point
+	range: 10
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.fill.gg.weak.fadeshort.5m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (7, 148, 72)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.fill.rr.weak.fadeshort.20m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (5, 0, 56)
+
+	type: point
+	range: 20
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.fill.rr.weak.fadeshort.10m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (6, 0, 56)
+
+	type: point
+	range: 10
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.fill.rr.weak.fadeshort.5m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (7, 0, 56)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.fill.bb.weak.fadeshort.20m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (5, 264, 68)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.fill.bb.weak.fadeshort.10m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (6, 264, 68)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+}
+
+light_source : light.fill.bb.weak.fadeshort.5m
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (7, 264, 68)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+}
+
+
+light_source : light.fill.gg.weak.fadelong.20m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (5, 148, 72)
+
+	type: point
+	range: 20
+	always_on: true
+}
+
+light_source : light.fill.gg.weak.fadelong.10m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (6, 148, 72)
+
+	type: point
+	range: 10
+	always_on: true
+}
+
+light_source : light.fill.gg.weak.fadelong.5m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (7, 148, 72)
+
+	type: point
+	range: 5
+	always_on: true
+}
+
+light_source : light.fill.rr.weak.fadelong.20m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (5, 0, 56)
+
+	type: point
+	range: 20
+	always_on: true
+}
+
+light_source : light.fill.rr.weak.fadelong.10m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (6, 0, 56)
+
+	type: point
+	range: 10
+	always_on: true
+}
+
+light_source : light.fill.rr.weak.fadelong.5m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (7, 0, 56)
+
+	type: point
+	range: 5
+	always_on: true
+}
+
+light_source : light.fill.bb.weak.fadelong.15m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 240, 68)
+        diffuse_color: (5, 240, 68)
+
+	type: point
+	range: 15
+	always_on: true
+}
+
+light_source : light.fill.bb.weak.fadelong.20m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (5, 264, 68)
+
+	type: point
+	range: 20
+	always_on: true
+}
+
+light_source : light.fill.bb.weak.fadelong.10m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (6, 264, 68)
+
+	type: point
+	range: 10
+	always_on: true
+}
+
+light_source : light.fill.bb.weak.fadelong.5m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (7, 264, 68)
+
+	type: point
+	range: 5
+	always_on: true
+}
+
+light_source : light.fill.gg.weak.fadeshort.20m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (5, 148, 72)
+
+	type: point
+	range: 20
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : light.fill.gg.weak.fadeshort.10m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (6, 148, 72)
+
+	type: point
+	range: 10
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : light.fill.gg.weak.fadeshort.5m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 148, 72)
+        diffuse_color: (7, 148, 72)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : light.fill.rr.weak.fadeshort.20m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (5, 0, 56)
+
+	type: point
+	range: 20
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : light.fill.rr.weak.fadeshort.10m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (6, 0, 56)
+
+	type: point
+	range: 10
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : light.fill.rr.weak.fadeshort.5m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 0, 56)
+        diffuse_color: (7, 0, 56)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : light.fill.bb.weak.fadeshort.20m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (5, 264, 68)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : light.fill.bb.weak.fadeshort.10m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (6, 264, 68)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : light.fill.bb.weak.fadeshort.5m.always
+{
+	setup: lux_hue_saturation
+        ambient_color: (0.1, 264, 68)
+        diffuse_color: (7, 264, 68)
+
+	type: point
+	range: 5
+	fade_distance: 40
+    	fade_span: 60
+	always_on: true
+}
+
+light_source : light.fill.garage.strong.fadelong.40m
+{
+	setup: lux_hue_saturation
+	ambient_color: (1, 40, 1)
+	diffuse_color: (15, 40, 1)
+	type: point
+	range: 40
+}
+}

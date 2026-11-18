@@ -1,0 +1,68 @@
+SiiNunit
+{
+light_source : gas.st.lamp.n.5m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (2100, 50, 15)
+	specular_color: (2100, 50, 15)
+
+	range: 18
+	cut_range: 6
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : gas.st.lamp.n.6m
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (2600, 50, 15)
+	specular_color: (2600, 50, 15)
+
+	range: 21
+	cut_range: 7
+	inner_angle: 5.0
+	outer_angle: 130.0
+}
+
+light_source : gas.st.fill.n.15m
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 40, 50)
+	diffuse_color: (9, 50, 15)
+
+	type: point
+	range: 15
+}
+
+light_source : gas.st.fill.n.60m 
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 50, 80)
+	diffuse_color: (14, 50, 15)
+
+	type: point
+	range: 60
+}
+
+light_source : gas.st.fill.g.20m
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 148, 72)
+	diffuse_color: (5, 148, 72)
+
+	type: point
+	range: 20
+}
+
+light_source : gas.st.fill.r.20m
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 0, 56)
+	diffuse_color: (5, 0, 56)
+
+	type: point
+	range: 20
+}
+}

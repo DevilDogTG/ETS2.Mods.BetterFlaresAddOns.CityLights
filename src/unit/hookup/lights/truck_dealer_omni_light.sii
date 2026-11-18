@@ -1,0 +1,12 @@
+SiiNunit
+{
+light_source : truck.dealer.omni.light
+{
+	setup: lumen_hue_saturation
+	diffuse_color: (17700, 45, 55)
+	specular_color: (17700, 45, 55)
+
+	type: point
+	range: 9
+}
+}

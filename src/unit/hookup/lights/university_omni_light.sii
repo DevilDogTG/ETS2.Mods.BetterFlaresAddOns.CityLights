@@ -1,0 +1,12 @@
+SiiNunit
+{
+light_source : university.omni.light
+{
+	setup: lux_hue_saturation
+	ambient_color: (0.1, 45, 55)
+	diffuse_color: (20, 45, 55)
+
+	type: point
+	range: 21.5
+}
+}

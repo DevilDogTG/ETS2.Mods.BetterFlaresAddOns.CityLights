@@ -1,0 +1,17 @@
+SiiNunit
+{
+light_source : ambient.no.source
+{
+	setup: lumen_hue_saturation	
+	ambient_color: (0.1, 34, 90)
+	diffuse_color: (17000, 36, 82)
+	specular_color: (17000, 36, 82)
+
+	range: 57
+	cut_range: 19
+	inner_angle: 5.0
+	outer_angle: 130.0
+
+	forward_distance: false
+}
+}
