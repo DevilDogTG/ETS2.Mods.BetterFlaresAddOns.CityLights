@@ -9,10 +9,15 @@ base-game path, write the same path with
   2. every unit the base game has and BF's (pre-1.62) copy lacks: BF's styling taken from its sibling
      (`<name>.always` -> `<name>`) plus the unit's own base differences (`always_on`), or the base
      block verbatim when it has no sibling.
+Step 2 also runs on Better Flares Base's files at base-game paths (outside `vehicle/`).
+
+Module `env` (ADR-0002): base files under `unit/hookup` that no BF pack ships get BF's sprite for every
+flare whose vanilla sprite BF replaces elsewhere (table learned from BF at build time: base model -> BF
+model + scaling). Lights and flares BF has no precedent for stay vanilla.
 
 ETS2 replaces whole files, so an output file carries every BF value; lines are edited in place (value
-token only) and line endings stay BF's. A file equal to BF's is not written. Re-run after every game or
-Better Flares update.
+token only) and line endings stay BF's. A file equal to its source is not written. Re-run after every game
+or Better Flares update.
 
     python tools/generate_citylights.py                   # regenerate src/unit/hookup
     python tools/generate_citylights.py --neutral --out <dir>   # identity run: must equal BF byte-for-byte
@@ -45,12 +50,18 @@ BF_PACKS = (BF_ROOT / "bf_base_v4.9.1", BF_CL)
 #            1.0 = base-game brightness; BF's lights that are already brighter stay BF's. None = BF's values.
 # ambient    ambient_color first component, same rule. None = BF's (BF keeps ambient at ~0.1 x base).
 # restore    re-add the units BF's pre-1.62 copies drop.
-LEVERS = dict(intensity=1.0, ambient=None, restore=True)
-NEUTRAL = dict(intensity=None, ambient=None, restore=False)
+# env        BF sprites on base env flares BF leaves vanilla (module `env`).
+LEVERS = dict(intensity=1.0, ambient=None, restore=True, env=True)
+NEUTRAL = dict(intensity=None, ambient=None, restore=False, env=False)
 # ---------------------------------------------------------------------------------------------------------
 
 INTENSITY_KEYS = ("diffuse_color", "specular_color")
 SIBLING_SUFFIX = ".always"
+SPRITE_KEYS = ("model", "default_scale", "scale_factor", "scaling_start_distance", "scaling_end_distance")
+SKIP_PREFIX = "unit/hookup/vehicle/"          # vehicle lights: MoreVisibility / a later add-on, not here
+FOREIGN = {                                   # base paths another DriveDogs mod owns: never shipped here
+    "unit/hookup/tr_light_flares.sii": "BetterFlaresAddOns.TrafficLights",
+}
 
 HEADER_RE = re.compile(r"^[ \t]*(\w+)[ \t]*:[ \t]*([\w.]+)[ \t]*\r?\n[ \t]*\{[^\r\n]*\r?\n", re.M)
 CLOSE_RE = re.compile(r"^[ \t]*\}[ \t]*(?:\r?\n|$)", re.M)
@@ -162,6 +173,64 @@ def merge_sibling(bf_sib: Unit, base_sib: Unit, base_unit: Unit, nl: str) -> str
     return block
 
 
+def sprite_table(base: Path) -> dict[str, tuple[str, ...]]:
+    """Base flare model -> BF's (model, scaling keys...), the most common treatment over both BF packs.
+    `-` = BF leaves that key unset."""
+    seen: dict[str, Counter] = {}
+    for pack in BF_PACKS:
+        for f in sorted((pack / OWNED_DIR).rglob("*.sii")):
+            rel = f.relative_to(pack).as_posix()
+            if rel.startswith(SKIP_PREFIX) or not (base / rel).is_file():
+                continue
+            twins = {u.name: u for u in units(read(base / rel))}
+            for u in units(read(f)):
+                b = twins.get(u.name)
+                if b is None:
+                    continue
+                bm, uv = b.values().get("model", [None])[0], u.values()
+                if bm and bm != uv.get("model", [None])[0]:
+                    seen.setdefault(bm, Counter())[tuple(uv.get(k, ["-"])[0] for k in SPRITE_KEYS)] += 1
+    return {bm: sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))[0][0] for bm, c in seen.items()}
+
+
+def apply_sprite(block: str, rule: tuple[str, ...], nl: str) -> str:
+    """Set BF's sprite + scaling keys on one block: edit present keys in place, insert missing ones."""
+    old_model = Unit("", "", block, 0, 0).values()["model"][0]
+    for key, val in zip(SPRITE_KEYS, rule):
+        if val == "-":
+            continue
+        if key in Unit("", "", block, 0, 0).values():
+            block = set_key(block, key, lambda old, v=val: v)
+        else:
+            indent = re.search(r"^([ \t]*)model[ \t]*:", block, re.M).group(1)
+            close = CLOSE_RE.search(block, HEADER_RE.match(block).end())
+            block = block[:close.start()] + f"{indent}{key}: {val}{nl}" + block[close.start():]
+    if Unit("", "", block, 0, 0).values().get("model_light_source", [None])[0] == old_model:
+        block = set_key(block, "model_light_source", lambda old: rule[0])
+    return block
+
+
+def restyle(text: str, table: dict, report: Counter, notes: list[str], rel: str, only: set | None = None) -> str:
+    """Apply the sprite table to every unit (or the named ones) in `text`, back to front."""
+    nl = newline_of(text)
+    for u in reversed(units(text)):
+        if only is not None and u.name not in only:
+            continue
+        model = u.values().get("model", [None])[0]
+        if model is None:
+            if u.cls == "light_source":
+                report["env lights kept base (BF style = base at base brightness)"] += 1
+            continue
+        if model not in table:
+            report["env flares kept vanilla (no BF sprite for it)"] += 1
+            notes.append(f"kept vanilla sprite {model}: {u.name}  [{rel}]")
+            continue
+        text = text[:u.start] + apply_sprite(u.text, table[model], nl) + text[u.end:]
+        report["env flares given BF's sprite"] += 1
+        notes.append(f"BF sprite {model} -> {table[model][0]}: {u.name}  [{rel}]")
+    return text
+
+
 def check_versions(base: Path) -> None:
     if repo_game(ROOT) != GAME:
         fail(f"this generator is for {GAME}; pack.config.json says {repo_game(ROOT)!r}")
@@ -176,23 +245,32 @@ def check_versions(base: Path) -> None:
             fail(f"{pack} missing - extract Better Flares {BF_VERSION}")
 
 
-def generate(levers: dict, report: Counter, notes: list[str]) -> dict[str, str]:
+def generate(levers: dict, report: Counter, notes: list[str]) -> dict[str, tuple[str, Path]]:
+    """rel path -> (text, source file it must differ from to be shipped)."""
     base = base_dir(reference_root(GAME), BASE_VERSION)
     check_versions(base)
     bf_defined = {}                                           # unit name -> BF file (all BF packs)
+    top: dict[str, Path] = {}                                 # rel -> pack whose copy loads (City Lights wins)
     for pack in BF_PACKS:
         for f in sorted((pack / OWNED_DIR).rglob("*.sii")):
+            rel = f.relative_to(pack).as_posix()
             for u in units(read(f)):
-                bf_defined.setdefault(u.name, f.relative_to(pack).as_posix())
+                bf_defined.setdefault(u.name, rel)
+            if not rel.startswith(SKIP_PREFIX) and rel not in FOREIGN:
+                top[rel] = pack
+    table = sprite_table(base) if levers["env"] else {}
 
-    out: dict[str, str] = {}
-    for bf_file in sorted((BF_CL / OWNED_DIR).rglob("*.sii")):
-        rel = bf_file.relative_to(BF_CL).as_posix()
-        base_file = base / rel
+    out: dict[str, tuple[str, Path]] = {}
+    for rel in sorted(top):
+        pack = top[rel]
+        bf_file, base_file = pack / rel, base / rel
         bf_text = read(bf_file)
         if not base_file.is_file():
             report["files BF-only (left to BF)"] += 1
-            out[rel] = bf_text
+            out[rel] = (bf_text, bf_file)
+            continue
+        if pack != BF_CL and not levers["restore"]:
+            out[rel] = (bf_text, bf_file)
             continue
         nl = newline_of(bf_text)
         base_units = {u.name: u for u in units(read(base_file))}
@@ -201,7 +279,7 @@ def generate(levers: dict, report: Counter, notes: list[str]) -> dict[str, str]:
 
         # 1. brightness on BF's own units (edit back to front so offsets stay valid)
         text = bf_text
-        for u in reversed(bf_units):
+        for u in reversed(bf_units if pack == BF_CL else []):  # brightness: City Lights only
             van = base_units.get(u.name)
             if u.cls != "light_source":
                 continue
@@ -245,6 +323,8 @@ def generate(levers: dict, report: Counter, notes: list[str]) -> dict[str, str]:
                     block = bu.text.replace("\r\n", "\n").replace("\n", nl)
                     report["restored as base (no sibling)"] += 1
                     notes.append(f"restored as base (no BF sibling): {name}  [{rel}]")
+                    if pack != BF_CL and table:              # BF Base file: BF's sprite where it has one
+                        block = restyle(block, table, report, notes, rel)
                 if bu.cls == "light_source" and block is not bu.text:
                     merged = Unit(bu.cls, name, block, 0, 0).values()
                     vv = bu.values()
@@ -257,14 +337,25 @@ def generate(levers: dict, report: Counter, notes: list[str]) -> dict[str, str]:
             if added:
                 close = text.rstrip().rfind("}")
                 text = text[:close] + nl + nl.join(added) + text[close:]
-        out[rel] = text
+        out[rel] = (text, bf_file)
+
+    # module env: base files no BF pack ships
+    if levers["env"]:
+        for f in sorted((base / OWNED_DIR).rglob("*.sii")):
+            rel = f.relative_to(base).as_posix()
+            if rel.startswith(SKIP_PREFIX) or rel in FOREIGN or any((p / rel).is_file() for p in BF_PACKS):
+                continue
+            text = read(f)
+            if not re.search(r"^\s*(light_source|flare\w*)\s*:", text, re.M):
+                continue
+            out[rel] = (restyle(text, table, report, notes, rel), f)
     return out
 
 
-def check_models(files: dict[str, str]) -> None:
+def check_models(files: dict[str, tuple[str, Path]]) -> None:
     base = base_dir(reference_root(GAME), BASE_VERSION)
     missing = set()
-    for rel, text in files.items():
+    for rel, (text, _) in files.items():
         for path in MODEL_RE.findall(text):
             p = path.lstrip("/")
             if any((pack / p).is_file() for pack in BF_PACKS) or ref_exists(base, p):
@@ -292,8 +383,8 @@ def main() -> None:
     if owned.exists():
         shutil.rmtree(owned)
     written = 0
-    for rel, text in sorted(files.items()):
-        if not args.neutral and text == read(BF_CL / rel):
+    for rel, (text, source) in sorted(files.items()):
+        if not args.neutral and text == read(source):
             continue
         write(target / rel, text)
         written += 1

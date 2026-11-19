@@ -1,0 +1,17 @@
+SiiNunit
+{
+flare_blink : flare.model.foto.blink2
+{
+	dir_type: all
+	model: "/model/flare/lamp_4k.pmd"
+
+	blink_pattern: "X----------------------"
+	blink_step_length: 0.25
+
+	blink_desync: 2.0
+	default_scale: 9
+	scale_factor: 1.6
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+}
+}
