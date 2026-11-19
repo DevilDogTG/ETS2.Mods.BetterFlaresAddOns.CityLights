@@ -11,14 +11,15 @@ consistent style.
   Better Flares' sprite, colour and beam shape.
 - Lights that are missing with City Lights on game 1.62 come back: its files predate 1.62 and drop the
   newer fill lights used in underground depots, player garages and some bus stations. Four orange
-  roadwork / sign blinkers missing with Better Flares Base come back too.
+  roadwork / sign blinkers and the white tram signal on red, missing with Better Flares Base, come back
+  too.
 - Environment flares Better Flares leaves vanilla get its sprites where it has one for that colour:
   speed-camera flashes, plane / obstruction lights (white, red, green) and green lamps. Blue beacons and
   coloured or decorative lamps (Akureyri pier, Genoa bridge, coloured omni lights) stay as in the base game.
 
 What does NOT change:
 - Headlights and vehicle lights (see DriveDogs: Better Flares More Visibility).
-- Traffic lights.
+- Traffic-light timing and lenses (see DriveDogs World).
 --------------------
 [orange]Requirements / load order
 [normal]Top = highest priority in Mod Manager:

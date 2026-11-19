@@ -57,11 +57,11 @@ NEUTRAL = dict(intensity=None, ambient=None, restore=False, env=False)
 
 INTENSITY_KEYS = ("diffuse_color", "specular_color")
 SIBLING_SUFFIX = ".always"
+TWIN_MAX_KEYS = 1                             # restored unit with no .always sibling: BF's edits from a 1-key twin
 SPRITE_KEYS = ("model", "default_scale", "scale_factor", "scaling_start_distance", "scaling_end_distance")
 SKIP_PREFIX = "unit/hookup/vehicle/"          # vehicle lights: MoreVisibility / a later add-on, not here
-FOREIGN = {                                   # base paths another DriveDogs mod owns: never shipped here
-    "unit/hookup/tr_light_flares.sii": "BetterFlaresAddOns.TrafficLights",
-}
+FOREIGN: dict[str, str] = {}                  # base paths another DriveDogs mod owns: never shipped here
+# (tr_light_flares.sii was TrafficLights'; that add-on is deprecated, so the BF Base restore now covers it - ADR-0002)
 
 HEADER_RE = re.compile(r"^[ \t]*(\w+)[ \t]*:[ \t]*([\w.]+)[ \t]*\r?\n[ \t]*\{[^\r\n]*\r?\n", re.M)
 CLOSE_RE = re.compile(r"^[ \t]*\}[ \t]*(?:\r?\n|$)", re.M)
@@ -171,6 +171,21 @@ def merge_sibling(bf_sib: Unit, base_sib: Unit, base_unit: Unit, nl: str) -> str
             lines = "".join(f"\t{key}: {v}{nl}" for v in want[key])
             block = block[:close.start()] + lines + block[close.start():]
     return block
+
+
+def nearest_twin(base_unit: Unit, base_units: dict[str, Unit], bf_by_name: dict[str, Unit]) -> str | None:
+    """A unit in the same base file that BF ships, same class, whose base block differs from this one in at most
+    TWIN_MAX_KEYS values (e.g. flare.traffic.white.rh vs .white.r: the sprite only). Closest wins, then name."""
+    want = base_unit.values()
+    best = None
+    for name, other in base_units.items():
+        if name == base_unit.name or name not in bf_by_name or other.cls != base_unit.cls:
+            continue
+        have = other.values()
+        diff = sum(want.get(k) != have.get(k) for k in set(want) | set(have))
+        if diff <= TWIN_MAX_KEYS and (best is None or (diff, name) < best):
+            best = (diff, name)
+    return best[1] if best else None
 
 
 def sprite_table(base: Path) -> dict[str, tuple[str, ...]]:
@@ -316,9 +331,14 @@ def generate(levers: dict, report: Counter, notes: list[str]) -> dict[str, tuple
                     notes.append(f"skipped (BF defines it in {bf_defined[name]}): {name}  [{rel}]")
                     continue
                 sib = name[:-len(SIBLING_SUFFIX)] if name.endswith(SIBLING_SUFFIX) else None
+                twin = None if sib else nearest_twin(bu, base_units, bf_by_name)
                 if sib and sib in bf_by_name and sib in base_units:
                     block = merge_sibling(bf_by_name[sib], base_units[sib], bu, nl)
                     report["restored, BF-styled from sibling"] += 1
+                elif twin:
+                    block = merge_sibling(bf_by_name[twin], base_units[twin], bu, nl)
+                    report["restored, BF-styled from twin"] += 1
+                    notes.append(f"restored, BF-styled from twin {twin}: {name}  [{rel}]")
                 else:
                     block = bu.text.replace("\r\n", "\n").replace("\n", nl)
                     report["restored as base (no sibling)"] += 1
@@ -352,13 +372,19 @@ def generate(levers: dict, report: Counter, notes: list[str]) -> dict[str, tuple
     return out
 
 
-def check_models(files: dict[str, tuple[str, Path]]) -> None:
+def check_models(files: dict[str, tuple[str, Path]], notes: list[str]) -> None:
+    """Fail on a model: path that resolves nowhere, unless the source file already carries it (BF's own dangling
+    units, e.g. BF Base's unused flare.traffic.*_left -> /model/flare/tr_left_*.pmd): those ship as BF has them."""
     base = base_dir(reference_root(GAME), BASE_VERSION)
     missing = set()
-    for rel, (text, _) in files.items():
+    for rel, (text, source) in files.items():
+        inherited = set(MODEL_RE.findall(read(source)))
         for path in MODEL_RE.findall(text):
             p = path.lstrip("/")
             if any((pack / p).is_file() for pack in BF_PACKS) or ref_exists(base, p):
+                continue
+            if path in inherited:
+                notes.append(f"dangling model kept as the source has it: {path}  [{rel}]")
                 continue
             missing.add(f"{path}  [{rel}]")
     if missing:
@@ -376,7 +402,7 @@ def main() -> None:
 
     report, notes = Counter(), []
     files = generate(NEUTRAL if args.neutral else LEVERS, report, notes)
-    check_models(files)
+    check_models(files, notes)
 
     target = args.out or OUT_ROOT
     owned = target / OWNED_DIR
