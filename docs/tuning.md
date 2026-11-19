@@ -5,7 +5,7 @@ logged here with its values and the in-game verdict. At release this becomes the
 
 | Round | Build | Lever group | Values | What to check | Verdict |
 |---|---|---|---|---|---|
-| T1 | 1.0.0-dev.1 | brightness + restore | `intensity` 1.0 (diffuse / specular = max(BF, base game)), `ambient` BF's, `restore` on | City street at night vs BF alone; a highway tunnel (8,000 → 63,700 lm); København underground depot (`goto 7449;-46;-27992`) and a player garage (restored fills) | pending |
+| T1 | 1.0.0-dev.1 | brightness + restore | `intensity` 1.0 (diffuse / specular = max(BF, base game)), `ambient` BF's, `restore` on | City street at night vs BF alone; a highway tunnel (8,000 → 63,700 lm); København underground depot (`goto 7449;-46;-27992`) and a player garage (restored fills) | **Looks right** (2026-11-19). Drive: Iberian motorways at night, 18 Nov; log clean (no light / unit errors, mounted above all BF packs). Restored fills (depot, garage) not seen yet - check in the next round |
 
 ## Effect of T1 (generator report, 2026-11-18)
 - 530 BF-styled lights: 440 raised to base-game intensity, 84 already at or above it (kept), 6 kept BF's
