@@ -1,0 +1,1148 @@
+SiiNunit
+{
+
+/* 	# Blink Model with background source
+flare_blink : flare.model.arrow.xxxx 
+{
+dir_type: all
+
+	blink_pattern: "---X-"
+	blink_step_length: 0.5 # Time per step (s)
+	
+	state_change_duration: 0.1 # Transition time (s)
+
+	model: "/model/flare/bf_r3.pmd" # Flare Model
+	model_light_source: "/model/flare/sign_flare_red_arrow.pmd" # Background model which wont rotate or change size
+}
+*/
+
+
+## GREEN
+
+flare_blink : flare.model.green.blink
+{
+	dir_type: all
+
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_gr.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.green.blink0
+{
+	dir_type: all
+
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_gr.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.green.blink1
+{
+	dir_type: all
+
+	blink_pattern: "-X-"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_gr.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.green.blink2
+{
+	dir_type: all
+
+	blink_pattern: "--X"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_gr.pmd"
+}
+
+flare : flare.model.green.noblink
+{
+	dir_type: all
+	model: "/model/flare/bf_gr.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare : flare.model.green.nob_n
+{
+	dir_type: angle
+	flare_inner_angle: 75.0
+	flare_outer_angle: 105.0
+	
+	model: "/model/flare/tr_green.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+## ORANGE
+
+flare_blink : flare.model.orange.blink
+{
+	dir_type: wide
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80	
+}
+
+flare_blink_sync : flare.model.orange.blink.sync
+{
+	dir_type: wide
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	sync_ms_delay: 100
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.sync2
+{
+	dir_type: wide
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "--XX------"
+	blink_step_length: 0.1
+
+	sync_ms_delay: 150
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.sync3
+{
+	dir_type: wide
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "----XX----"
+	blink_step_length: 0.1
+
+	sync_ms_delay: 150
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.sync4
+{
+	dir_type: wide
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "------XX--"
+	blink_step_length: 0.1
+
+	sync_ms_delay: 150
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.sync5
+{
+	dir_type: wide
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "--------XX"
+	blink_step_length: 0.1
+
+	sync_ms_delay: 150
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.all0
+{
+	dir_type: all
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.all1
+{
+	dir_type: all
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "-X-"
+	blink_step_length: 0.5
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.all2
+{
+	dir_type: all
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "--X"
+	blink_step_length: 0.5
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.all3
+{
+	dir_type: angle
+	flare_inner_angle: 0.0
+	flare_outer_angle: 180.0
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "---X"
+	blink_step_length: 0.8
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.all3n
+{
+	dir_type: angle
+	flare_inner_angle: 75.0
+	flare_outer_angle: 105.0
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "X-"
+	blink_step_length: 0.5
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.all4n
+{
+	dir_type: angle
+	flare_inner_angle: 75.0
+	flare_outer_angle: 105.0
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "-X"
+	blink_step_length: 0.5
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.alter0
+{
+	dir_type: all
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "X-"
+	blink_step_length: 0.5
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.alter1
+{
+	dir_type: all
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "-X"
+	blink_step_length: 0.5
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.wide.alter0
+{
+	dir_type: wide
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "X-"
+	blink_step_length: 0.5
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink_sync : flare.model.orange.blink.wide.alter1
+{
+	dir_type: wide
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "-X"
+	blink_step_length: 0.5
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.orange.blink_narrow
+{
+	dir_type: angle
+	flare_inner_angle: 50.0
+	flare_outer_angle: 80.0
+	
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (80, 32, 100)
+	specular_color: (80, 32, 100)
+	type: spot
+	range: 6.0
+	
+	inner_angle: 5.0
+	outer_angle: 90.0
+	pitch_offset: -10
+	forward_distance: false
+	
+	fade_distance: 120
+	fade_span: 60
+	
+	state_change_duration: 0.01
+	
+	blink_pattern: "X--"
+	blink_step_length: 0.3
+
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare: flare.model.orange
+{
+	dir_type: all
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare: flare.model.orange.small
+{
+	dir_type: all
+	
+	model: "/model/flare/bf_o1.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+## RED
+
+flare : flare.model.red.nob_n
+{
+	dir_type: angle
+	flare_inner_angle: 75.0
+	flare_outer_angle: 105.0
+	
+	model: "/model/flare/tr_red.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.blink.spot
+{
+	dir_type: angle
+	flare_inner_angle: 0.0
+	flare_outer_angle: 180.0
+
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_r3.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.blink
+{
+	dir_type: all
+
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_r3.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.blink0
+{
+	dir_type: all
+
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_r3.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.blink1
+{
+	dir_type: all
+
+	blink_pattern: "-X-"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_r3.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.blink2
+{
+	dir_type: all
+
+	blink_pattern: "--X"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_r3.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare: flare.model.red.noblink
+{
+	dir_type: all
+
+	model: "/model/flare/bf_r3.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.blink_narrow
+{
+	dir_type: angle
+	flare_inner_angle: 50.0
+	flare_outer_angle: 80.0
+
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_r3.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.blink_bright
+{
+	dir_type: angle
+	flare_inner_angle: 0.0
+	flare_outer_angle: 360.0
+
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	model: "/model/flare/bf_r3.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.arrow2.blink0
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 0, 100)
+	specular_color: (200, 0, 100)
+	type: spot
+	range: 3.0
+
+	inner_angle: 60.0
+	outer_angle: 175.0
+	forward_distance: false
+
+	dir_type: angle
+	flare_inner_angle: 40.0
+	flare_outer_angle: 110.0
+
+	blink_pattern: "X---"
+	blink_step_length: 0.3
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/bf_r3.pmd"
+	model_light_source: "/model/flare/sign_flare_red_arrow2.pmd"
+	default_scale: 1.5
+	scale_factor: 2.0
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.arrow2.blink1
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 0, 100)
+	specular_color: (200, 0, 100)
+	type: spot
+	range: 3.0
+
+	inner_angle: 60.0
+	outer_angle: 175.0
+	forward_distance: false
+
+	
+	dir_type: angle
+	flare_inner_angle: 40.0
+	flare_outer_angle: 110.0
+
+	blink_pattern: "-X--"
+	blink_step_length: 0.3
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/bf_r3.pmd"
+	model_light_source: "/model/flare/sign_flare_red_arrow2.pmd"
+	default_scale: 1.5
+	scale_factor: 2.0
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.arrow2.blink2
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 0, 100)
+	specular_color: (200, 0, 100)
+	type: spot
+	range: 3.0
+
+	inner_angle: 60.0
+	outer_angle: 175.0
+	forward_distance: false
+	
+	dir_type: angle
+	flare_inner_angle: 40.0
+	flare_outer_angle: 110.0
+
+	blink_pattern: "--X-"
+	blink_step_length: 0.3
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/bf_r3.pmd"
+	model_light_source: "/model/flare/sign_flare_red_arrow2.pmd"
+	default_scale: 1.5
+	scale_factor: 2.0
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.arrow2.blink3
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 0, 100)
+	specular_color: (200, 0, 100)
+	type: spot
+	range: 3.0
+
+	
+	inner_angle: 60.0
+	outer_angle: 175.0
+	forward_distance: false
+	
+	dir_type: angle
+	flare_inner_angle: 40.0
+	flare_outer_angle: 110.0
+
+	blink_pattern: "---X"
+	blink_step_length: 0.3
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/bf_r3.pmd"
+	model_light_source: "/model/flare/sign_flare_red_arrow2.pmd"
+	default_scale: 1.5
+	scale_factor: 2.0
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.arrow1.blink0
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 0, 100)
+	specular_color: (200, 0, 100)
+	type: spot
+	range: 3.0
+
+	inner_angle: 60.0
+	outer_angle: 175.0
+	forward_distance: false
+
+	dir_type: angle
+	flare_inner_angle: 40.0
+	flare_outer_angle: 110.0
+
+	blink_pattern: "X---"
+	blink_step_length: 0.3
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/bf_r3.pmd"
+	model_light_source: "/model/flare/sign_flare_red_arrow.pmd"
+	default_scale: 1.5
+	scale_factor: 2.0
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.arrow1.blink1
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 0, 100)
+	specular_color: (200, 0, 100)
+	type: spot
+	range: 3.0
+
+	inner_angle: 60.0
+	outer_angle: 175.0
+	forward_distance: false
+
+	
+	dir_type: angle
+	flare_inner_angle: 40.0
+	flare_outer_angle: 110.0
+
+	blink_pattern: "-X--"
+	blink_step_length: 0.3
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/bf_r3.pmd"
+	model_light_source: "/model/flare/sign_flare_red_arrow.pmd"
+	default_scale: 1.5
+	scale_factor: 2.0
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.arrow1.blink2
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 0, 100)
+	specular_color: (200, 0, 100)
+	type: spot
+	range: 3.0
+
+	inner_angle: 60.0
+	outer_angle: 175.0
+	forward_distance: false
+	
+	dir_type: angle
+	flare_inner_angle: 40.0
+	flare_outer_angle: 110.0
+
+	blink_pattern: "--X-"
+	blink_step_length: 0.3
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/bf_r3.pmd"
+	model_light_source: "/model/flare/sign_flare_red_arrow.pmd"
+	default_scale: 1.5
+	scale_factor: 2.0
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.red.arrow1.blink3
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 0, 100)
+	specular_color: (200, 0, 100)
+	type: spot
+	range: 3.0
+
+	
+	inner_angle: 60.0
+	outer_angle: 175.0
+	forward_distance: false
+	
+	dir_type: angle
+	flare_inner_angle: 40.0
+	flare_outer_angle: 110.0
+
+	blink_pattern: "---X"
+	blink_step_length: 0.3
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/bf_r3.pmd"
+	model_light_source: "/model/flare/sign_flare_red_arrow.pmd"
+	default_scale: 1.5
+	scale_factor: 2.0
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.orange.blink.strong
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 27, 100)
+	specular_color: (200, 27, 100)
+	type: spot
+	range: 3.0
+
+	
+	inner_angle: 60.0
+	outer_angle: 175.0
+	forward_distance: false
+	
+	dir_type: angle
+	flare_inner_angle: 40.0
+	flare_outer_angle: 110.0
+
+	blink_pattern: "---X"
+	blink_step_length: 0.3
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/bf_lmp_o.pmd"
+	model_light_source: "/model/flare/bf_lmp_o.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare_blink : flare.model.orange.blink2
+{
+	dir_type: all
+	
+	blink_pattern: "-X"
+	blink_step_length: 0.75
+
+	state_change_duration: 0.001
+
+	model: "/model/flare/sign_flare_orange_small.pmd"
+}
+
+flare_blink : flare.model.orange.blink3
+{
+	dir_type: all
+	
+	blink_pattern: "X-"
+	blink_step_length: 0.75
+
+	state_change_duration: 0.001
+
+	model: "/model/flare/sign_flare_orange_small.pmd"
+}
+
+flare_blink : flare.model.orange.blink4
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 27, 100)
+	specular_color: (200, 27, 100)
+	type: spot
+	range: 3.5
+
+	
+	inner_angle: 20.0
+	outer_angle: 175.0
+	forward_distance: false
+	
+	dir_type: angle
+	flare_inner_angle: 15.0
+	flare_outer_angle: 175.0
+
+	blink_pattern: "-X"
+	blink_step_length: 0.75
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/sign_flare_orange_small.pmd"
+	model_light_source: "/model/flare/sign_flare_orange_small.pmd"
+}
+
+flare_blink : flare.model.orange.blink5
+{
+	setup: lumen_hue_saturation
+	ambient_color: (0, 0, 100)
+	diffuse_color: (200, 27, 100)
+	specular_color: (200, 27, 100)
+	type: spot
+	range: 3.5
+
+	
+	inner_angle: 20.0
+	outer_angle: 175.0
+	forward_distance: false
+	
+	dir_type: angle
+	flare_inner_angle: 15.0
+	flare_outer_angle: 175.0
+
+	blink_pattern: "X-"
+	blink_step_length: 0.75
+	
+	state_change_duration: 0.001
+
+	model: "/model/flare/sign_flare_orange_small.pmd"
+	model_light_source: "/model/flare/sign_flare_orange_small.pmd"
+}
+}

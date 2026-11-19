@@ -10,9 +10,11 @@ consistent style.
   the base game's light). This mod gives every lamp back its own base-game brightness while keeping
   Better Flares' sprite, colour and beam shape.
 - Lights that are missing with City Lights on game 1.62 come back: its files predate 1.62 and drop the
-  newer fill lights used in underground depots, player garages and some bus stations.
-- (planned for 1.0.0) Tunnel lights and environment lights Better Flares never touches (beacons, plane
-  flares, Genoa bridge, Akureyri pier, dealer halls, coloured lamps) in the Better Flares style.
+  newer fill lights used in underground depots, player garages and some bus stations. Four orange
+  roadwork / sign blinkers missing with Better Flares Base come back too.
+- Environment flares Better Flares leaves vanilla get its sprites where it has one for that colour:
+  speed-camera flashes, plane / obstruction lights (white, red, green) and green lamps. Blue beacons and
+  coloured or decorative lamps (Akureyri pier, Genoa bridge, coloured omni lights) stay as in the base game.
 
 What does NOT change:
 - Headlights and vehicle lights (see DriveDogs: Better Flares More Visibility).

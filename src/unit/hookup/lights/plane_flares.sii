@@ -1,0 +1,58 @@
+SiiNunit
+{
+
+flare : flare.model.red.plane
+{
+	dir_type: angle
+	flare_inner_angle: 110.0
+	flare_outer_angle: 130.0
+	
+	model: "/model/flare/bf_r3.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare : flare.model.green.plane
+{
+	dir_type: angle
+	flare_inner_angle: 110.0
+	flare_outer_angle: 130.0
+
+	model: "/model/flare/bf_gr.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+
+flare : flare.model.white.plane
+{
+	dir_type: angle
+	flare_inner_angle: 140.0
+	flare_outer_angle: 160.0
+
+	model: "/model/flare/lamp_4k.pmd"
+	default_scale: 9
+	scale_factor: 1.6
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+}
+
+flare_blink : flare.model.plane.blink
+{
+	dir_type: all
+	
+	blink_pattern: "X--"
+	blink_step_length: 0.5
+
+	model: "/model/flare/lamp_4k.pmd"
+	default_scale: 9
+	scale_factor: 1.6
+	scaling_start_distance: 0
+	scaling_end_distance: 60
+}
+
+
+}

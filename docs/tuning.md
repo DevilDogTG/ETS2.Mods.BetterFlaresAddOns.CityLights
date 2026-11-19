@@ -7,6 +7,15 @@ logged here with its values and the in-game verdict. At release this becomes the
 |---|---|---|---|---|---|
 | T1 | 1.0.0-dev.1 | brightness + restore | `intensity` 1.0 (diffuse / specular = max(BF, base game)), `ambient` BF's, `restore` on | City street at night vs BF alone; a highway tunnel (8,000 → 63,700 lm); København underground depot (`goto 7449;-46;-27992`) and a player garage (restored fills) | **Looks right** (2026-11-19). Drive: Iberian motorways at night, 18 Nov; log clean (no light / unit errors, mounted above all BF packs). Restored fills (depot, garage) not seen yet - check in the next round |
 
+| T2 | 1.0.0-dev.2 | env sprites + BF Base restore | `env` on (BF sprite table on untouched env flares), restore widened to BF Base; T1 levers unchanged | Speed-camera flash, plane / obstruction lights, green lamps, roadwork orange blinkers; restored fills from T1 (København depot, garage) | pending |
+
+## Effect of T2 (generator report, 2026-11-19)
+- 8 env flares given BF's sprite: speed-camera flash x3 (`lamp_4k`), plane flares white + white blink (`lamp_4k`),
+  red (`bf_r3`), green (`bf_gr`), `flare.model.green` (`bf_gr`).
+- 13 env flares kept vanilla (BF has no sprite): blue beacons x8, `flare.model.orange.blink2-5`, yellow garage lamp.
+- 24 untouched env lights kept as base (BF's style at base brightness = base).
+- BF Base `light_blinking.sii`: 4 dropped orange blinkers restored. 94 files shipped (88 from T1 + 6).
+
 ## Effect of T1 (generator report, 2026-11-18)
 - 530 BF-styled lights: 440 raised to base-game intensity, 84 already at or above it (kept), 6 kept BF's
   (3 other setup unit, 3 without a base twin).

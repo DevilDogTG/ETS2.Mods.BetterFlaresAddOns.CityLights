@@ -5,7 +5,7 @@ Flares look (flare sprites, colour shift, beam shape) but light the world about 
 lights City Lights drops on game 1.62 come back, and environment lights Better Flares never touches get the same
 style.
 
-**Status: in development (`1.0.0-dev.1`, first test build: brightness + 1.62 restore).** ETS2 1.62 only, Better Flares Base 4.9.1 + City Lights 4.9. An ATS twin
+**Status: in development (`1.0.0-dev.2`: brightness + 1.62 restore + Better Flares sprites on untouched environment flares).** ETS2 1.62 only, Better Flares Base 4.9.1 + City Lights 4.9. An ATS twin
 repo comes later.
 
 ## Load order
@@ -25,10 +25,14 @@ Top = highest priority in Mod Manager:
 - **1.62 restore:** City Lights ships whole copies of 139 `unit/hookup/lights/**` files made before 1.62, so
   143 newer `light_source` units are missing while it is loaded (underground / indoor fill lights: 1.62
   underground depots, player garages, Helsinki bus station, Eindhoven museum). The regenerated files carry the
-  base game's full unit list, so they come back.
-- **Planned for 1.0.0:** tunnel lights (City Lights gives them light but no flare sprite) and environment
-  units Better Flares leaves vanilla (beacons / plane flares, Genoa bridge, Akureyri pier, `dealer.int.big`,
-  coloured `light.omni.*`).
+  base game's full unit list, so they come back. Better Flares Base's `light_blinking.sii` has the same
+  problem (4 orange blinkers); they come back too.
+- **Untouched environment flares:** speed-camera flashes, plane / obstruction lights and green lamps get the
+  sprite Better Flares uses for the same vanilla sprite elsewhere ([ADR-0002](docs/adr/ADR-0002-env-flares-and-bf-base-restore.md)).
+  Blue beacons and the yellow garage lamp have no Better Flares sprite and stay vanilla; the untouched
+  coloured / decorative lights (Akureyri pier, Genoa bridge, coloured omni, `dealer.int.big`) already match
+  Better Flares' style at base-game brightness, so they are not shipped. Tunnels get no sprite (the base game
+  has none).
 
 Not here: headlights (MoreVisibility), traffic lights (DriveDogs World), vehicle interior / plate lights.
 
@@ -46,7 +50,8 @@ so a game or Better Flares update is a regenerate, not a re-edit. Design: [ADR-0
 |---|---|
 | `intensity` | diffuse / specular target as a fraction of the base game (`1.0` = base-game brightness, `None` = BF's) |
 | `ambient` | ambient target, same rule (`None` = BF's) |
-| `restore` | re-add the units City Lights drops on 1.62 |
+| `restore` | re-add the units City Lights (and Better Flares Base) drop on 1.62 |
+| `env` | Better Flares sprites on environment flares it leaves vanilla |
 
 Test rounds and their values: [`docs/tuning.md`](docs/tuning.md).
 

@@ -1,0 +1,12 @@
+SiiNunit
+{
+flare_lamp : flare.model.green
+{
+	dir_type: all
+	model: "/model/flare/bf_gr.pmd"
+	default_scale: 1.5
+	scale_factor: 2.5
+	scaling_start_distance: 0
+	scaling_end_distance: 80
+}
+}
