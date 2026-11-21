@@ -5,7 +5,7 @@ Flares look (flare sprites, colour shift, beam shape) but light the world about 
 lights City Lights drops on game 1.62 come back, and environment lights Better Flares never touches get the same
 style.
 
-**Status: in development (`1.0.0-dev.3`: brightness + 1.62 restore + Better Flares sprites on untouched environment flares + the missing white tram traffic flare).** ETS2 1.62 only, Better Flares Base 4.9.1 + City Lights 4.9. An ATS twin
+**Status: `1.0.0`** (brightness + 1.62 restore + Better Flares sprites on untouched environment flares + the missing white tram traffic flare). ETS2 1.62 only, Better Flares Base 4.9.1 + City Lights 4.9. An ATS twin
 repo comes later.
 
 ## Load order
