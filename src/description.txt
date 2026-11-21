@@ -35,4 +35,5 @@ Only for Euro Truck Simulator 2 1.62 with Better Flares v4.9 / v4.9.1. Better Fl
 Lights Addon are both required. Use the plain City Lights Addon, not "City Lights Addon with Fog".
 --------------------
 [orange]Changelog
-[normal]1.0.0 - First release (in development).
+[normal]1.0.0 - First release. Base-game brightness with the Better Flares look, the lights City Lights
+drops on game 1.62 restored, and Better Flares sprites on environment flares it leaves vanilla.

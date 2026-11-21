@@ -3,6 +3,8 @@
 Levers live at the top of `tools/generate_citylights.py` (`LEVERS`). One lever group per test build; each round is
 logged here with its values and the in-game verdict. At release this becomes the Tx table of released values.
 
+Released: **1.0.0** ships the T3 values (dev.3, all three rounds passed).
+
 | Round | Build | Lever group | Values | What to check | Verdict |
 |---|---|---|---|---|---|
 | T1 | 1.0.0-dev.1 | brightness + restore | `intensity` 1.0 (diffuse / specular = max(BF, base game)), `ambient` BF's, `restore` on | City street at night vs BF alone; a highway tunnel (8,000 → 63,700 lm); København underground depot (`goto 7449;-46;-27992`) and a player garage (restored fills) | **Looks right** (2026-11-19). Drive: Iberian motorways at night, 18 Nov; log clean (no light / unit errors, mounted above all BF packs). Restored fills (depot, garage) not seen yet - check in the next round |
