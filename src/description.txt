@@ -14,7 +14,7 @@ consistent style.
   roadwork / sign blinkers and the white tram signal on red, missing with Better Flares Base, come back
   too.
 - Environment flares Better Flares leaves vanilla get its sprites where it has one for that colour:
-  speed-camera flashes, plane / obstruction lights (white, red, green) and green lamps. Blue beacons and
+  photographers' camera flashes, plane / obstruction lights (white, red, green) and green lamps. Blue beacons and
   coloured or decorative lamps (Akureyri pier, Genoa bridge, coloured omni lights) stay as in the base game.
 
 What does NOT change:

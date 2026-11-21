@@ -7,8 +7,8 @@ logged here with its values and the in-game verdict. At release this becomes the
 |---|---|---|---|---|---|
 | T1 | 1.0.0-dev.1 | brightness + restore | `intensity` 1.0 (diffuse / specular = max(BF, base game)), `ambient` BF's, `restore` on | City street at night vs BF alone; a highway tunnel (8,000 → 63,700 lm); København underground depot (`goto 7449;-46;-27992`) and a player garage (restored fills) | **Looks right** (2026-11-19). Drive: Iberian motorways at night, 18 Nov; log clean (no light / unit errors, mounted above all BF packs). Restored fills (depot, garage) not seen yet - check in the next round |
 
-| T2 | 1.0.0-dev.2 | env sprites + BF Base restore | `env` on (BF sprite table on untouched env flares), restore widened to BF Base; T1 levers unchanged | Speed-camera flash, plane / obstruction lights, green lamps, roadwork orange blinkers; restored fills from T1 (København depot, garage) | pending |
-| T3 | 1.0.0-dev.3 | `tr_light_flares.sii` restore | restore covers BF Base's `tr_light_flares.sii` (TrafficLights deprecated); twin rule; T2 levers unchanged | T2's points still open, plus a tram signal showing white on red; normal traffic lights unchanged | pending |
+| T2 | 1.0.0-dev.2 | env sprites + BF Base restore | `env` on (BF sprite table on untouched env flares), restore widened to BF Base; T1 levers unchanged | Photographer camera flash, plane / obstruction lights, green lamps, roadwork orange blinkers; restored fills from T1 (København depot, garage) | pending |
+| T3 | 1.0.0-dev.3 | `tr_light_flares.sii` restore | restore covers BF Base's `tr_light_flares.sii` (TrafficLights deprecated); twin rule; T2 levers unchanged | T2's points still open; `flare.traffic.white.rh` is used by no 1.62 model (scan 2026-11-21: only `white.r`, 8 tram signals), so it is a log check only; normal and tram traffic lights unchanged | pending |
 
 ## Effect of T3 (generator report, 2026-11-19)
 - BF Base `tr_light_flares.sii`: `flare.traffic.white.rh` restored, BF-styled from twin `flare.traffic.white.r`
@@ -17,7 +17,7 @@ logged here with its values and the in-game verdict. At release this becomes the
 - 95 files shipped (94 from T2, unchanged, + 1).
 
 ## Effect of T2 (generator report, 2026-11-19)
-- 8 env flares given BF's sprite: speed-camera flash x3 (`lamp_4k`), plane flares white + white blink (`lamp_4k`),
+- 8 env flares given BF's sprite: photographer camera flash x3 (`lamp_4k`), plane flares white + white blink (`lamp_4k`),
   red (`bf_r3`), green (`bf_gr`), `flare.model.green` (`bf_gr`).
 - 13 env flares kept vanilla (BF has no sprite): blue beacons x8, `flare.model.orange.blink2-5`, yellow garage lamp.
 - 24 untouched env lights kept as base (BF's style at base brightness = base).
