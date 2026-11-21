@@ -7,7 +7,7 @@
 After ADR-0001 (round T1: "looks right" at base-game brightness), 42 base environment units under `unit/hookup`
 (outside `vehicle/`) are still defined by no Better Flares pack:
 - 24 `light_source`: Akureyri pier, coloured weak omni lamps, Genoa bridge, `dealer.int.big`, `light.unset`.
-- 18 flares: speed-camera flash (`foto_01-03`), plane / obstruction lights (`plane_flares.sii`), `green.sii`, blue
+- 18 flares: photographer camera flash (`foto_01-03`, crowd movers `man_foto_01-03`; not speed cameras), plane / obstruction lights (`plane_flares.sii`), `green.sii`, blue
   beacons (`blue_blinking.sii`), the yellow garage lamp.
 
 Better Flares' own data shows what its look means for these:

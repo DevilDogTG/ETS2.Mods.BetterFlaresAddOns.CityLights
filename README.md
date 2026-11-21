@@ -28,7 +28,7 @@ Top = highest priority in Mod Manager:
   base game's full unit list, so they come back. Better Flares Base's `light_blinking.sii` (4 orange blinkers)
   and `tr_light_flares.sii` (`flare.traffic.white.rh`, the steady white tram aspect on red) have the same
   problem; they come back too, styled like their Better Flares twin where one exists.
-- **Untouched environment flares:** speed-camera flashes, plane / obstruction lights and green lamps get the
+- **Untouched environment flares:** photographers' camera flashes (crowd movers), plane / obstruction lights and green lamps get the
   sprite Better Flares uses for the same vanilla sprite elsewhere ([ADR-0002](docs/adr/ADR-0002-env-flares-and-bf-base-restore.md)).
   Blue beacons and the yellow garage lamp have no Better Flares sprite and stay vanilla; the untouched
   coloured / decorative lights (Akureyri pier, Genoa bridge, coloured omni, `dealer.int.big`) already match
